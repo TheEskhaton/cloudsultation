@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/core": "^1.0.0-rc.5",
     "next": "9.5.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "swr": "^0.3.5"
   }
 }
