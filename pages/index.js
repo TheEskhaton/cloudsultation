@@ -6,6 +6,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Skeleton,
   Stack
 } from "@chakra-ui/core";
 import Head from "next/head";
@@ -27,6 +28,7 @@ export default function Home() {
 
   const {
     data,
+    isFetching,
     isFetchingMore,
     fetchMore,
     canFetchMore,
@@ -54,19 +56,34 @@ export default function Home() {
       <Container maxW="lg" centerContent>
         <Stack m="8" spacing="4">
           <Stack spacing="4">
-            <Box  alignSelf="center" as={"form"} onSubmit={searchSubmit}>
-            <InputGroup type="text" maxW="md">
-              <InputLeftElement pointerEvents="none">
-                <Icon as={FiSearch} color="gray.300"></Icon>
-              </InputLeftElement>
-              <Input
-                value={searchText}
-                onBlur={setQuery}
-                onChange={(e) => setSearchText(e.target.value)}
-                placeholder="Name of cloud service"
-              ></Input>
-            </InputGroup>
+            <Box alignSelf="center" as={"form"} onSubmit={searchSubmit}>
+              <InputGroup type="text" maxW="md">
+                <InputLeftElement pointerEvents="none">
+                  <Icon as={FiSearch} color="gray.300"></Icon>
+                </InputLeftElement>
+                <Input
+                  value={searchText}
+                  onBlur={setQuery}
+                  onChange={(e) => setSearchText(e.target.value)}
+                  placeholder="Name of cloud service"
+                ></Input>
+              </InputGroup>
             </Box>
+            {isFetching && (
+              <Skeleton
+           
+                    width={["sm", "md", "lg"]}
+       
+                        rounded="lg"
+               
+                height="150px"
+           
+                    mx="8"
+       
+                        mx="2"
+              
+              ></Skeleton>
+            )}
             {data &&
               data.map((serviceGroup) => {
                 return serviceGroup.services.map((s, indexOfTheService) => (
@@ -75,7 +92,7 @@ export default function Home() {
               })}
             <Box alignSelf="center">
               <Button
-              isLoading={isFetchingMore}
+                isLoading={isFetchingMore}
                 variant="outline"
                 colorScheme="green"
                 textTransform="uppercase"
