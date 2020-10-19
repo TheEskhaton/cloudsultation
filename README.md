@@ -1,30 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Why?
 
-## Getting Started
+The Cloudsultation project is a simple web application which you can use to find the best cloud service for your next project.
 
-First, run the development server:
+Many cloud services have situations in which they are better used that other, and many more have situations in which they are unusable.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+For example (a very basic one) - an Azure load balancer can not be used to balance traffic by URL and therefore you would not used it in a project that requires that.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+It was build using Next.js, Chakra UI and React query and is deployed on Vercel.
 
-## Learn More
+## What's next
 
-To learn more about Next.js, take a look at the following resources:
+**Your turn!**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In order to make this app useful, I need you expertise. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Although I know a bit about cloud services, I am not an expert in all of them.
 
-## Deploy on Vercel
+The project is open to pull requests with additional services and situations in which to use, or not used them.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To do so:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Check the services.json file in the data folder
+2. Add a new service to the list OR
+3. Modify an existing service
+4. Create a pull request
+5. Discuss
+6. Merge!
+
+If you can't find a good icon for the service, don't worry, we'll handle that for you.
+
+
