@@ -54,8 +54,9 @@
       "colorScheme": "teal"
     },
 
-
+    
     {
+
 
 
       "provider": "azure",
@@ -72,6 +73,22 @@
         "You need messages more than 1 MB in size",
         "You need transactional message allowing more than 100 message in a transaction"
       ]
+    },
+    {
+
+
+      "provider": "azure",
+      "displayName": "Cosmos DB",
+      "logo": "/img/infrastructure/azure/Azure Cosmos DB.svg",
+      "useIf": [
+        "You need a geo-redundant database",
+        "You need a tunable consistency model",
+        "You need to be able to scale your database in an instant",
+        "You need guaranteed read speeds at any scale",
+        "You need a database with multiple data access API (SQL, Cassandra and MongoDB)"
+      ],
+      "doNotUseIf": ["Your use case can be solved with Azure Table Storage or Blob Storage - Cosmos DB can get quite expensive if used for the wrong purpose", "You need more than 99.999% uptime"],
+      "colorScheme": "orange"
     }
   ]
 }

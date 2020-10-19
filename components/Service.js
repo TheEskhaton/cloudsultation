@@ -7,7 +7,7 @@ import {
   Spacer,
   Tag,
   TagLabel,
-  UnorderedList,
+  UnorderedList
 } from "@chakra-ui/core";
 
 export default function Service({ service }) {
@@ -31,12 +31,15 @@ export default function Service({ service }) {
           shadow="sm"
           alignItems="center"
         >
-          <Image
-            mr="1"
-            display="inline"
-            boxSize="32px"
-            src={service.logo}
-          ></Image>
+          <Box bg="gray.100" 
+                mr="1" p="1" rounded="lg">
+              <Image
+                display="inline"
+                boxSize="32px"
+                src={service.logo}
+              ></Image>
+          
+          </Box>
           <Box ml="1" fontWeight="700">
             {service.displayName}
           </Box>
