@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Container,
   Icon,
@@ -13,9 +14,7 @@ import { FiSearch } from "react-icons/fi";
 import { useInfiniteQuery } from "react-query";
 import Service from "../components/Service";
 
-
 const getServices = async (key, searchQuery, cursor) => {
-  console.log(cursor)
   const res = await fetch(`/api/search?q=${searchQuery}&cursor=${cursor}`);
 
   return await res.json();
@@ -35,12 +34,10 @@ export default function Home() {
     fetchMore,
     canFetchMore,
   } = useInfiniteQuery(["search", searchQuery.toLowerCase()], getServices, {
-    getFetchMore: (lastGroup, allGroups) => {
-      console.log( "Getfetch", lastGroup);
-      return lastGroup.meta.nextCursor
-    }
+    getFetchMore: (lastGroup) => {
+      return lastGroup.meta.nextCursor;
+    },
   });
-
 
   const setQuery = useCallback(() => {
     setSearchQuery(searchText);
@@ -73,13 +70,15 @@ export default function Home() {
                   <Service key={indexOfTheService} service={s}></Service>
                 ));
               })}
-
-            <Button
-              disabled={!canFetchMore || isFetchingMore}
-              onClick={() => fetchMore()}
-            >
-              LOAD MOREE
-            </Button>
+            <Box alignSelf="center">
+              <Button variant="outline" colorScheme="green"
+                        textTransform="uppercase"
+                disabled={!canFetchMore || isFetchingMore}
+                onClick={() => fetchMore()}
+              >
+                Load more
+              </Button>
+            </Box>
           </Stack>
         </Stack>
       </Container>
