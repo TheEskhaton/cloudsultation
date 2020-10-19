@@ -44,6 +44,7 @@
       "doNotUseIf": ["You need a relational database"],
       "colorScheme": "orange"
     },
+
     {
       "provider": "gcp",
       "displayName": "Cloud Storage",
@@ -51,6 +52,26 @@
       "useIf": ["You need a good free tier to prototype apps"],
       "doNotUseIf": ["You are using other clouds"],
       "colorScheme": "teal"
+    },
+
+
+    {
+
+
+      "provider": "azure",
+      "displayName": "Service Bus",
+      "logo": "/img/infrastructure/azure/Azure Service Bus.svg",
+      "useIf": [
+        "You need a publish and subscribe messaging service",
+        "You need to decouple your applications from each other",
+        "You need to enable existing Java Message Service (JMS) applications to talk to Service Bus",
+        "You need to Protect your application from temporary spikes in traffic"
+      ],
+      "doNotUseIf": [
+        "You need more than 99.9% uptime",
+        "You need messages more than 1 MB in size",
+        "You need transactional message allowing more than 100 message in a transaction"
+      ]
     }
   ]
 }
