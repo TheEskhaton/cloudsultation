@@ -26,10 +26,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const {
-    isLoading,
-    isError,
     data,
-    error,
     isFetchingMore,
     fetchMore,
     canFetchMore,
@@ -43,6 +40,11 @@ export default function Home() {
     setSearchQuery(searchText);
   }, [searchText, setSearchQuery]);
 
+  const searchSubmit = (e) => {
+    e.preventDefault();
+    setQuery();
+  };
+ 
   return (
     <div>
       <Head>
@@ -52,7 +54,8 @@ export default function Home() {
       <Container maxW="lg" centerContent>
         <Stack m="8" spacing="4">
           <Stack spacing="4">
-            <InputGroup alignSelf="center" type="text" maxW="md">
+            <Box  alignSelf="center" as={"form"} onSubmit={searchSubmit}>
+            <InputGroup type="text" maxW="md">
               <InputLeftElement pointerEvents="none">
                 <Icon as={FiSearch} color="gray.300"></Icon>
               </InputLeftElement>
@@ -63,7 +66,7 @@ export default function Home() {
                 placeholder="Name of cloud service"
               ></Input>
             </InputGroup>
-
+            </Box>
             {data &&
               data.map((serviceGroup) => {
                 return serviceGroup.services.map((s, indexOfTheService) => (
@@ -71,8 +74,11 @@ export default function Home() {
                 ));
               })}
             <Box alignSelf="center">
-              <Button variant="outline" colorScheme="green"
-                        textTransform="uppercase"
+              <Button
+              isLoading={isFetchingMore}
+                variant="outline"
+                colorScheme="green"
+                textTransform="uppercase"
                 disabled={!canFetchMore || isFetchingMore}
                 onClick={() => fetchMore()}
               >
