@@ -36,7 +36,6 @@
       "doNotUseIf": ["You need to balance traffic based on URL paths"],
       "colorScheme": "green"
     },
-
     {
       "provider": "aws",
       "displayName": "DynamoDB",
@@ -45,14 +44,1040 @@
       "doNotUseIf": ["You need a relational database"],
       "colorScheme": "orange"
     },
+
+    
     {
+
       "provider": "gcp",
       "displayName": "Cloud Storage",
       "logo": "/img/infrastructure/gcp/Google_Storage-Logo.wine.svg",
       "useIf": ["You need a good free tier to prototype apps"],
       "doNotUseIf": ["You are using other clouds"],
       "colorScheme": "teal"
+      
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Blob Storage",
+      "logo": "/img/infrastructure/azure/Blob Storage.svg",
+      "useIf": [
+        "You need a safe way to store files",
+        "You need redundancy and failover capabilities"
+      ],
+      "doNotUseIf": ["You need to mount the files as a local drive"],
+      "colorScheme": "teal"
     }
-    
   ]
 }

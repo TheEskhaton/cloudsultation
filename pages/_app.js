@@ -1,10 +1,20 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/core";
 import Head from "next/head";
+import { QueryCache, ReactQueryCacheProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query-devtools";
 
 const theme = extendTheme({
   fonts: {
     body: "Inter, system-ui, sans-serif",
     heading: "Inter, system-ui, sans-serif",
+  },
+});
+
+const queryCache = new QueryCache({
+  defaultConfig: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
   },
 });
 
@@ -17,7 +27,11 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <ReactQueryCacheProvider queryCache={queryCache}>
+        <Component {...pageProps} />
+
+        <ReactQueryDevtools initialIsOpen={false} />
+      </ReactQueryCacheProvider>
     </ChakraProvider>
   );
 }
