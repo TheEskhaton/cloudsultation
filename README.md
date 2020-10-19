@@ -1,4 +1,4 @@
-## Why?
+## What?
 
 The Cloudsultation project is a simple web application which you can use to find the best cloud service for your next project.
 
@@ -8,7 +8,7 @@ For example (a very basic one) - an Azure load balancer can not be used to balan
 
 ## How
 
-It was build using Next.js, Chakra UI and React query and is deployed on Vercel.
+It was build using [Next.js](https://nextjs.org/), [Chakra UI](next.chakra-ui.com/) and [React Query](https://react-query.tanstack.com/) and is deployed on [Vercel](https://vercel.com/).
 
 ## What's next
 
