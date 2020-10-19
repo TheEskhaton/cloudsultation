@@ -4,7 +4,7 @@ The Cloudsultation project is a simple web application which you can use to find
 
 Many cloud services have situations in which they are better used that other, and many more have situations in which they are unusable.
 
-For example (a very basic one) - an Azure load balancer can not be used to balance traffic by URL and therefore you would not used it in a project that requires that.
+For example (a very basic one) - an Azure load balancer can not be used to balance traffic by URL and therefore you would not use it in a project that requires that.
 
 ## How
 
@@ -14,9 +14,9 @@ It was build using [Next.js](https://nextjs.org/), [Chakra UI](next.chakra-ui.co
 
 **Your turn!**
 
-In order to make this app useful, I need you expertise. 
+In order to make this app useful, I need your expertise. 
 
-Although I know a bit about cloud services, I am not an expert in all of them.
+Although I know a bit about some cloud services, I am not an expert in all of them.
 
 The project is open to pull requests with additional services and situations in which to use, or not used them.
 
