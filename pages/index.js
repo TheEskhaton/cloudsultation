@@ -10,10 +10,11 @@ import {
   Stack
 } from "@chakra-ui/core";
 import Head from "next/head";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useInfiniteQuery } from "react-query";
 import Service from "../components/Service";
+import useFocusHotkey from "../hooks/useFocusHotkey";
 
 const getServices = async (key, searchQuery, cursor) => {
   const res = await fetch(`/api/search?q=${searchQuery}&cursor=${cursor}`);
@@ -37,6 +38,10 @@ export default function Home() {
       return lastGroup.meta.nextCursor;
     },
   });
+
+  const searchInputRef = useRef(null);
+
+  useFocusHotkey(searchInputRef);
 
   const setQuery = useCallback(() => {
     setSearchQuery(searchText);
@@ -62,10 +67,11 @@ export default function Home() {
                   <Icon as={FiSearch} color="gray.300"></Icon>
                 </InputLeftElement>
                 <Input
+                  ref={searchInputRef}
                   value={searchText}
                   onBlur={setQuery}
                   onChange={(e) => setSearchText(e.target.value)}
-                  placeholder="Name of cloud service"
+                  placeholder='Press "S" to search'
                 ></Input>
               </InputGroup>
             </Box>

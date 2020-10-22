@@ -34,7 +34,10 @@ If you can't find a good icon for the service, don't worry, we'll handle that fo
 
 ## TODO
 
-- [ ] Implement fuzzy search (fuse.js?)
-- [ ] Search through pros and cons as well
+- [x] Implement fuzzy search (fuse.js?)
+- [x] Search through pros and cons as well
 - [ ] Add search hotkey ("/" seems to be standard these days)
+- [ ] Add filtering by cloud provider (Tabs under search textbox?)
 - [ ] Add a suggestion feature - we'll need a backend for that? Maybe just use the next js API feature and store data to a free db, mongo atlas maybe has a free tier? Maybe I can just use github as a backend - pull requests.
+- [ ] Add highlighting after searching (see fusejs - includeMatches)
+- [ ] Optional: serialize the index to fs and load on startup
