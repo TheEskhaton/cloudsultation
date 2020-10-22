@@ -32,3 +32,9 @@ To do so:
 If you can't find a good icon for the service, don't worry, we'll handle that for you.
 
 
+## TODO
+
+- [ ] Implement fuzzy search (fuse.js?)
+- [ ] Search through pros and cons as well
+- [ ] Add search hotkey ("/" seems to be standard these days)
+- [ ] Add a suggestion feature - we'll need a backend for that? Maybe just use the next js API feature and store data to a free db, mongo atlas maybe has a free tier? Maybe I can just use github as a backend - pull requests.

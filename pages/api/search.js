@@ -1,6 +1,11 @@
+import Fuse from "fuse.js";
 import services from "../../data/services.json";
 
 const pageSize = 10;
+
+const fuse = new Fuse(services.items, {
+  keys: ["displayName", "useIf", "doNotUseIf"],
+});
 
 export default function handler(req, res) {
   res.statusCode = 200;
@@ -8,14 +13,12 @@ export default function handler(req, res) {
   const cursor = !isNaN(Number(req.query.cursor))
     ? Number(req.query.cursor)
     : 0;
-
-  const filteredServices = services.items.filter((s) => {
-    if (req.query.q) {
-      return s.displayName.toLowerCase().includes(req.query.q.toLowerCase());
-    }
-    return true;
-  });
-
+  let filteredServices = services.items;
+  if (req.query.q) {
+    filteredServices = fuse.search(req.query.q).map((s) => {
+      return s.item;
+    });
+  }
   let hasMore = true;
 
   if (filteredServices.length < cursor + pageSize) {

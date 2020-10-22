@@ -53,7 +53,7 @@ export default function Home() {
         <title>Cloud Consultant</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW="lg" centerContent>
+      <Container maxW="lg" centerContent paddingLeft="0" paddingRight="0">
         <Stack m="8" spacing="4">
           <Stack spacing="4">
             <Box alignSelf="center" as={"form"} onSubmit={searchSubmit}>
@@ -71,17 +71,11 @@ export default function Home() {
             </Box>
             {isFetching && (
               <Skeleton
-           
-                    width={["sm", "md", "lg"]}
-       
-                        rounded="lg"
-               
+                width={["sm", "md", "lg"]}
+                rounded="lg"
                 height="150px"
-           
-                    mx="8"
-       
-                        mx="2"
-              
+                mx="8"
+                mx="2"
               ></Skeleton>
             )}
             {data &&
