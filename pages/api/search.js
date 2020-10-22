@@ -6,6 +6,7 @@ const pageSize = 10;
 const fuse = new Fuse(services.items, {
   keys: ["displayName", "useIf", "doNotUseIf"],
   minMatchCharLength: 2,
+  threshold: 0.4,
 });
 
 export default function handler(req, res) {

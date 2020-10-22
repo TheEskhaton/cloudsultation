@@ -103,6 +103,22 @@
         "You need an out of the box Viber integration",
       "You need a self hosted bot service"],
       "colorScheme": "blue"
+    },
+    {
+      "provider": "azure",
+      "displayName": "IoT Hub",
+      "logo": "/img/infrastructure/azure/Azure IoT Hub.svg",
+      "useIf": [
+        "You need a cloud-hosted solution back end for IoT", 
+        "You need per-device authentication", 
+        "You need scaled provisioning",
+      "You need bi-drectional communication between your backend and devices",
+    "You need basic MQTT protocol support"],
+      "doNotUseIf": ["You can get by by using regular messaging services", 
+        "You need messages larger than 256 KB",
+        "You need a full-feature MQTT broker",
+        "You need SDK support for languages and frameworks other than: C#, C, Java, Node.js, Pythong"],
+      "colorScheme": "teal"
     }
   ]
 }
