@@ -43,3 +43,4 @@ If you can't find a good icon for the service, don't worry, we'll handle that fo
 - [ ] Add posibility to add links to pros and cons 
 - [ ] Optional: serialize the index to fs and load on startup
 - [ ] Add default sorting to services
+- [ ] Add github corner - https://tholman.com/github-corners/
