@@ -159,6 +159,19 @@
         "You need entities (table rows) larger than 1 MB", 
         "You need more than 255 properties on a single entity (table row)"],
       "colorScheme": "blue"
+    },
+    {
+      "provider": "azure",
+      "displayName": "API Management",
+      "logo": "/img/infrastructure/azure/API Management Services.svg",
+      "useIf": ["You need a managed API Gateway",
+         "You need to selectively expose data to clients", 
+         "You need a solution for creating a developer experience for your APIs", 
+         "You need an API facade for legacy systems",
+         "You need API Versioning",
+        "You need to add authorization to existing APIs"],
+      "doNotUseIf": ["You only intend on using the url routing", "You need only load balancing"],
+      "colorScheme": "green"
     }
 
     
