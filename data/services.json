@@ -117,8 +117,24 @@
       "doNotUseIf": ["You can get by by using regular messaging services", 
         "You need messages larger than 256 KB",
         "You need a full-feature MQTT broker",
-        "You need SDK support for languages and frameworks other than: C#, C, Java, Node.js, Pythong"],
+        "You need SDK support for languages and frameworks other than: C#, C, Java, Node.js, Python"],
       "colorScheme": "teal"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Functions",
+      "logo": "/img/infrastructure/azure/Function Apps.svg",
+      "useIf": [
+        "You need serverless functions written in C#, F#, Java, Javascript, PowerShell, Python, TypeScript",
+        "You need one-off quick operations", 
+        "You need near infinite burst scaling",
+        "You need complex orchestration scenarios"
+    ],
+      "doNotUseIf": [
+        "You need too write serverless code in unsupported languages", 
+        "You need an on-premise self-hosted serverless environment",
+        "You need long-running operations"],
+      "colorScheme": "yellow"
     }
   ]
 }
