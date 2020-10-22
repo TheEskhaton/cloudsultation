@@ -75,8 +75,6 @@
       ]
     },
     {
-
-
       "provider": "azure",
       "displayName": "Cosmos DB",
       "logo": "/img/infrastructure/azure/Azure Cosmos DB.svg",
@@ -89,6 +87,22 @@
       ],
       "doNotUseIf": ["Your use case can be solved with Azure Table Storage or Blob Storage - Cosmos DB can get quite expensive if used for the wrong purpose", "You need more than 99.999% uptime"],
       "colorScheme": "orange"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Bot Service",
+      "logo": "/img/infrastructure/azure/Bot Services.svg",
+      "useIf": [
+        "You need a managed chat bot framework",
+        "You need the possibility for proactive messaging",
+        "You need to incorporated bot to human handoff",
+        "You need to add natural language and speech to your bot", 
+        "You need many messaging platforms supported out of the box",
+      "You are already invested in the Microsoft ecosystem"],
+      "doNotUseIf": ["You need an out of the box WhatsApp integration", 
+        "You need an out of the box Viber integration",
+      "You need a self hosted bot service"],
+      "colorScheme": "blue"
     }
   ]
 }
