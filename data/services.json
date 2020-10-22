@@ -135,6 +135,19 @@
         "You need an on-premise self-hosted serverless environment",
         "You need long-running operations"],
       "colorScheme": "yellow"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Azure Cache for Redis",
+      "logo": "/img/infrastructure/azure/Azure Cache Redis Product icon.svg",
+      "useIf": [
+        "You need a managed scalable distributed caching solution",
+        "You need a way to store session, or and kind of transient data",
+        "You need RedisBloom, RediSearch and RedisTimeSeries module integration"
+    ],
+      "doNotUseIf": ["You need more than 99.99% uptime", 
+        "You need to have the Redis instance on premise"],
+      "colorScheme": "red"
     }
   ]
 }
