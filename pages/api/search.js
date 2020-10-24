@@ -12,21 +12,23 @@ const fuse = new Fuse(services.items, {
 export default function handler(req, res) {
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
-  const cursor = !isNaN(Number(req.query.cursor))
-    ? Number(req.query.cursor)
-    : 0;
+
+  const cursor = !isNaN(Number(req.body.cursor)) ? Number(req.body.cursor) : 0;
   let filteredServices = services.items;
-  if (req.query.q) {
-    filteredServices = fuse.search(req.query.q).map((s) => {
+  if (req.body.q) {
+    filteredServices = fuse.search(req.body.q).map((s) => {
       return s.item;
     });
   }
   let hasMore = true;
 
+  filteredServices = filteredServices.filter((s) => {
+    return req.body.providers.find((p) => p.selected && p.name === s.provider);
+  });
+
   if (filteredServices.length < cursor + pageSize) {
     hasMore = false;
   }
-
   res.end(
     JSON.stringify({
       meta: {

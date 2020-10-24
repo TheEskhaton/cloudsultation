@@ -1,29 +1,79 @@
 import {
   Box,
   Button,
+  ButtonGroup,
   Container,
+  HStack,
   Icon,
   Input,
   InputGroup,
   InputLeftElement,
   Skeleton,
-  Stack
+  Spinner,
+  Stack,
+  Tag,
 } from "@chakra-ui/core";
 import Head from "next/head";
 import { useCallback, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import { AiOutlineLoading } from "react-icons/ai";
 import { useInfiniteQuery } from "react-query";
 import Service from "../components/Service";
 import useFocusHotkey from "../hooks/useFocusHotkey";
 
-const getServices = async (key, searchQuery, cursor) => {
-  const res = await fetch(`/api/search?q=${searchQuery}&cursor=${cursor}`);
+const getServices = async (
+  key,
+  searchQuery,
+  selectedCloudProviders,
+  cursor
+) => {
+  const res = await fetch("/api/search", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      q: searchQuery,
+      cursor: cursor,
+      providers: selectedCloudProviders,
+    }),
+  });
 
   return await res.json();
 };
 
 export default function Home() {
   const [searchText, setSearchText] = useState("");
+  const [cloudProviders, setCloudProviders] = useState([
+    {
+      displayName: "Azure",
+      name: "azure",
+      selected: true,
+    },
+    {
+      displayName: "AWS",
+      name: "aws",
+      selected: true,
+    },
+    {
+      displayName: "GCP",
+      name: "gcp",
+      selected: true,
+    },
+  ]);
+
+  const toggleProviderSelected = useCallback(
+    (name) => {
+      setCloudProviders((previousCloudProviders) => {
+        const clickedCloudProvider = previousCloudProviders.find(
+          (c) => c.name === name
+        );
+        clickedCloudProvider.selected = !clickedCloudProvider.selected;
+        return [...previousCloudProviders];
+      });
+    },
+    [setCloudProviders]
+  );
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -33,11 +83,15 @@ export default function Home() {
     isFetchingMore,
     fetchMore,
     canFetchMore,
-  } = useInfiniteQuery(["search", searchQuery.toLowerCase()], getServices, {
-    getFetchMore: (lastGroup) => {
-      return lastGroup.meta.nextCursor;
-    },
-  });
+  } = useInfiniteQuery(
+    ["search", searchQuery.toLowerCase(), cloudProviders],
+    getServices,
+    {
+      getFetchMore: (lastGroup) => {
+        return lastGroup.meta.nextCursor;
+      },
+    }
+  );
 
   const searchInputRef = useRef(null);
 
@@ -51,7 +105,7 @@ export default function Home() {
     e.preventDefault();
     setQuery();
   };
- 
+
   return (
     <div>
       <Head>
@@ -74,16 +128,24 @@ export default function Home() {
                   placeholder='Press "S" to search'
                 ></Input>
               </InputGroup>
+              <Box display="flex" justifyContent="space-evenly" margin="0 auto">
+                <ButtonGroup position="relative" size="sm" spacing="2" mt="2">
+                  {cloudProviders.map((c) => {
+                    return (
+                      <Button
+                        key={c.name}
+                        onClick={() => toggleProviderSelected(c.name)}
+                        colorScheme={c.selected ? "green" : "gray"}
+                      >
+                        {c.displayName}
+                      </Button>
+                    );
+                  })}
+                 {isFetching && <Spinner position="absolute" right="-20px" top="8px" alignSelf="center" boxSize="14px" />}
+                 
+                </ButtonGroup>
+              </Box>
             </Box>
-            {isFetching && (
-              <Skeleton
-                width={["sm", "md", "lg"]}
-                rounded="lg"
-                height="150px"
-                mx="8"
-                mx="2"
-              ></Skeleton>
-            )}
             {data &&
               data.map((serviceGroup) => {
                 return serviceGroup.services.map((s, indexOfTheService) => (
