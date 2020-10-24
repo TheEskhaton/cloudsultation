@@ -182,8 +182,16 @@
         "You need a web application firewall"],
       "doNotUseIf": ["You need more than 99.95 percent SLA", "You only need OSI L4 load balancing"],
       "colorScheme": "green"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Logic Apps",
+      "logo": "/img/infrastructure/azure/Logic Apps.svg",
+      "useIf": ["You need to integrate many different systems together", 
+        "You need rapid scaling of your workflow or process",
+         "You need to be able to quickly respond to business changes"],
+      "doNotUseIf": ["You need to write a lot of custom code for your workflow"],
+      "colorScheme": "green"
     }
-
-    
   ]
 }
