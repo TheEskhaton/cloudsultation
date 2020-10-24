@@ -53,12 +53,7 @@
       "doNotUseIf": ["You are using other clouds"],
       "colorScheme": "teal"
     },
-
-    
     {
-
-
-
       "provider": "azure",
       "displayName": "Service Bus",
       "logo": "/img/infrastructure/azure/Azure Service Bus.svg",
@@ -192,6 +187,24 @@
          "You need to be able to quickly respond to business changes"],
       "doNotUseIf": ["You need to write a lot of custom code for your workflow"],
       "colorScheme": "green"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Kubernetes Service",
+      "logo": "/img/infrastructure/azure/Kubernetes.svg",
+      "useIf": ["You already have a dockerized application", 
+        "You are already using Kubernetes and need a hosted orchestration platform"],
+      "doNotUseIf": ["You need to lift and shift an app to the cloud"],
+      "colorScheme": "blue"
+    },
+    {
+      "provider": "azure",
+      "displayName": "Service Fabric",
+      "logo": "/img/infrastructure/azure/Service Fabric Clusters.svg",
+      "useIf": ["You need to lift and shift an on on-premise system to the cloud", 
+        "You are mostly using the Microsoft stack"],
+      "doNotUseIf": ["You already have a containerized Docker app and use Kubernetes"],
+      "colorScheme": "orange"
     }
   ]
 }
