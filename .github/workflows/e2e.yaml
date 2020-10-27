@@ -54,7 +54,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           state: success
-          description: All tests passed
     - name: Set status to "failure"
       # The "if" underneath makes sure that this step
       # runs solely when the step before was *not* successful
