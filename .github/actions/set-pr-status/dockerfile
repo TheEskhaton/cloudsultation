@@ -5,7 +5,8 @@ FROM node:slim
 # you run `npm install`
 COPY package*.json ./
 
-RUN npm ci
+RUN npm -i -g yarn
+RUN yarn ci
 
 COPY action.js /action.js
 
