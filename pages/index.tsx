@@ -102,7 +102,7 @@ export default function Home() {
     setSearchQuery(searchText);
   }, [searchText, setSearchQuery]);
 
-  const searchSubmit : FormEvent<HTMLFormElement> = (e) => {
+  const searchSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setQuery();
   };
@@ -127,6 +127,7 @@ export default function Home() {
                   onBlur={setQuery}
                   onChange={(e) => setSearchText(e.target.value)}
                   placeholder='Press "S" to search'
+                  type="text"
                 ></Input>
               </InputGroup>
               <Box display="flex" justifyContent="space-evenly" margin="0 auto">
@@ -155,6 +156,7 @@ export default function Home() {
               })}
             <Box alignSelf="center">
               <Button
+                data-test="loadmore"
                 isLoading={!!isFetchingMore}
                 variant="outline"
                 colorScheme="green"

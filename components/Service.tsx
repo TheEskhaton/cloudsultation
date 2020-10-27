@@ -9,8 +9,9 @@ import {
   TagLabel,
   UnorderedList
 } from "@chakra-ui/core";
+import { CloudService } from "../types/types";
 
-export default function Service({ service }) {
+export default function Service({ service }: { service: CloudService }) {
   const headerTextColor = service.colorScheme
     ? service.colorScheme + ".50"
     : "blue.50";
@@ -20,7 +21,7 @@ export default function Service({ service }) {
     : "blue.700";
 
   return (
-    <Box rounded="lg" shadow="md">
+    <Box data-test={service.displayName} rounded="lg" shadow="md">
       <Flex flexDir="column">
         <Flex
           roundedTop="lg"
@@ -31,14 +32,8 @@ export default function Service({ service }) {
           shadow="sm"
           alignItems="center"
         >
-          <Box bg="gray.100" 
-                mr="1" p="1" rounded="lg">
-              <Image
-                display="inline"
-                boxSize="32px"
-                src={service.logo}
-              ></Image>
-          
+          <Box bg="gray.100" mr="1" p="1" rounded="lg">
+            <Image display="inline" boxSize="32px" src={service.logo}></Image>
           </Box>
           <Box ml="1" fontWeight="700">
             {service.displayName}
