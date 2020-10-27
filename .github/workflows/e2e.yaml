@@ -54,13 +54,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           state: success
-    - name: Set status to "failure"
-      # The "if" underneath makes sure that this step
-      # runs solely when the step before was *not* successful
-      if: failure()
-      uses: ./.github/actions/set-pr-status
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        state: failure
-        description: Some tests failed
+          description: All tests passed
+      - name: Set status to "failure"
+        # The "if" underneath makes sure that this step
+        # runs solely when the step before was *not* successful
+        if: failure()
+        uses: ./.github/actions/set-pr-status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          state: failure
+          description: Some tests failed
