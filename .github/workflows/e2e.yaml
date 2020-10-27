@@ -1,0 +1,67 @@
+name: E2E tests
+on: [deployment_status]
+jobs:
+  set_pending:
+    name: Register pending E2E tests state
+    # This is the place where we define this job to only
+    # run when the deployment state is still "pending".
+    if: github.event.deployment_status.state == 'pending'
+    runs-on: ubuntu-latest
+
+    steps:
+      # This checks out the code of this repository.
+      # We need this because this is where our action
+      # lives.
+      - uses: actions/checkout@v1
+
+      - name: Set status to "pending"
+        uses: ./.github/actions/set-pr-status
+        env:
+          # You don't need to configure any secrets for this
+          # to work. GitHub injects the GITHUB_TOKEN automatically.
+          # We need it in this step so that our action
+          # can talk to the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # This is where we define the inputs
+          # for this action.
+          state: pending
+          description: Waiting for E2E results
+  run_e2e_tests:
+    name: Run E2E tests
+    # This statement makes sure that this job is only
+    # executed when the deployment to Vercel was
+    # successful
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    # Thank you cypress for providing a container
+    # that works out-of-the-box
+    container: cypress/browsers:node11.13.0-chrome73
+    env:
+      TERM: xterm
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Run E2E tests
+        run: cypress --config baseUrl=${{ github.event.deployment_status.target_url }}
+      - name: Set status to "success"
+        # The "if" underneath makes sure that this step
+        # runs solely when the step before was successful
+        if: success()
+        uses: ./.github/actions/set-pr-status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          state: success
+          description: All tests passed
+    - name: Set status to "failure"
+      # The "if" underneath makes sure that this step
+      # runs solely when the step before was *not* successful
+      if: failure()
+      uses: ./.github/actions/set-pr-status
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        state: failure
+        description: Some tests failed
