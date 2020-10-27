@@ -14,18 +14,19 @@ import {
   Tag,
 } from "@chakra-ui/core";
 import Head from "next/head";
-import { useCallback, useRef, useState } from "react";
+import { FormEvent, useCallback, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { AiOutlineLoading } from "react-icons/ai";
 import { useInfiniteQuery } from "react-query";
 import Service from "../components/Service";
 import useFocusHotkey from "../hooks/useFocusHotkey";
+import { CloudProvider, CloudService, CloudServicesSearchResponse } from "../types/types";
 
 const getServices = async (
-  key,
-  searchQuery,
-  selectedCloudProviders,
-  cursor
+  key: string,
+  searchQuery : string,
+  selectedCloudProviders : CloudProvider[],
+  cursor: number
 ) => {
   const res = await fetch("/api/search", {
     method: "POST",
@@ -83,7 +84,7 @@ export default function Home() {
     isFetchingMore,
     fetchMore,
     canFetchMore,
-  } = useInfiniteQuery(
+  } = useInfiniteQuery<CloudServicesSearchResponse>(
     ["search", searchQuery.toLowerCase(), cloudProviders],
     getServices,
     {
@@ -101,7 +102,7 @@ export default function Home() {
     setSearchQuery(searchText);
   }, [searchText, setSearchQuery]);
 
-  const searchSubmit = (e) => {
+  const searchSubmit : FormEvent<HTMLFormElement> = (e) => {
     e.preventDefault();
     setQuery();
   };
@@ -116,7 +117,7 @@ export default function Home() {
         <Stack m="8" spacing="4">
           <Stack spacing="4">
             <Box alignSelf="center" as={"form"} onSubmit={searchSubmit}>
-              <InputGroup type="text" maxW="md">
+              <InputGroup maxW="md">
                 <InputLeftElement pointerEvents="none">
                   <Icon as={FiSearch} color="gray.300"></Icon>
                 </InputLeftElement>
@@ -154,11 +155,11 @@ export default function Home() {
               })}
             <Box alignSelf="center">
               <Button
-                isLoading={isFetchingMore}
+                isLoading={!!isFetchingMore}
                 variant="outline"
                 colorScheme="green"
                 textTransform="uppercase"
-                disabled={!canFetchMore || isFetchingMore}
+                disabled={!canFetchMore || !!isFetchingMore}
                 onClick={() => fetchMore()}
               >
                 Load more

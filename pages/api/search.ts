@@ -1,5 +1,7 @@
 import Fuse from "fuse.js";
-import services from "../../data/services.json";
+import { NextApiRequest, NextApiResponse } from "next";
+import services from "../../data/services";
+import { CloudProvider } from "../../types/types";
 
 const pageSize = 10;
 
@@ -9,7 +11,7 @@ const fuse = new Fuse(services.items, {
   threshold: 0.4,
 });
 
-export default function handler(req, res) {
+export default function handler(req : NextApiRequest, res: NextApiResponse)  {
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
 
@@ -23,7 +25,7 @@ export default function handler(req, res) {
   let hasMore = true;
 
   filteredServices = filteredServices.filter((s) => {
-    return req.body.providers.find((p) => p.selected && p.name === s.provider);
+    return req.body.providers.find((p : CloudProvider) => p.selected && p.name === s.provider);
   });
 
   if (filteredServices.length < cursor + pageSize) {

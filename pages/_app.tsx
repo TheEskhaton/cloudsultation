@@ -2,6 +2,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/core";
 import Head from "next/head";
 import { QueryCache, ReactQueryCacheProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query-devtools";
+import { AppProps } from "next/app";
 
 const theme = extendTheme({
   fonts: {
@@ -18,7 +19,7 @@ const queryCache = new QueryCache({
   },
 });
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps } : AppProps) {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <Head>
